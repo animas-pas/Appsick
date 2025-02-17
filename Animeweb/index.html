@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ap.sure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-left">
+            <h1>Apsure</h1>
+        </div>
+        <div class="nav-right">
+            <button class="auth-btn" id="signInBtn">Sign In</button>
+            <button class="auth-btn primary" id="signUpBtn">Sign Up</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search apps...">
+            <button id="searchButton">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                Search
+            </button>
+        </div>
+
+        <nav class="categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="Games">Games</button>
+            <button class="category-btn" data-category="Anilab">Apps</button>
+            <button class="category-btn" data-category="Entertainment">Entertainment</button>
+            <button class="category-btn" data-category="Health & Fitness">Health & Fitness</button>
+            
+        </nav>
+
+        <main class="app-grid" id="appGrid">
+            <!-- Apps will be dynamically inserted here -->
+        </main>
+    </div>
+
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeAuthModal">&times;</button>
+            <div class="auth-content">
+                <h2 id="authTitle">Sign In</h2>
+                <form id="authForm">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="auth-submit">Continue</button>
+                </form>
+                <p class="auth-switch">
+                    <span id="authSwitch"></span>
+                    <a href="#" id="authSwitchLink"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-detail-modal" id="appDetailModal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <div class="app-detail-content">
+                <!-- App details will be dynamically inserted here -->
+            </div>
+            <button id="downloadButton" class="download-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
